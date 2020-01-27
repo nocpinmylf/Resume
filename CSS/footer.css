@@ -1,0 +1,18 @@
+footer {
+    background-color: rgb(70, 181, 255);
+    color: white;
+    /* text-align: center; */
+}
+
+footer a {
+    color: inherit;
+}
+
+footer>.contact {
+    padding: 10px 0;
+}
+
+footer a:hover {
+    color: rgb(202, 15, 15);
+    text-decoration: none;
+}

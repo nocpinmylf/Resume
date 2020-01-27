@@ -1,0 +1,91 @@
+a:hover {
+  text-decoration: none;
+}
+
+.sidebar-container,
+aside {
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.list-sidebar {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: relative;
+}
+
+.list-sidebar li {
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  line-height: 20px;
+}
+
+.list-sidebar li a {
+  padding: 10px 15px 10px 30px;
+  display: block;
+  color: #fff;
+}
+
+.list-sidebar li .fa {
+  margin-right: 10px;
+}
+
+.list-sidebar li a:active,
+.list-sidebar li a:hover,
+.list-sidebar li a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.list-sidebar > li::before {
+  background-color: rgb(79, 221, 60);
+  position: absolute;
+  content: "";
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 3px;
+  z-index: -1;
+}
+
+.list-sidebar > li ul li::before {
+  background-color: rgb(233, 56, 56);
+  position: absolute;
+  content: "";
+  height: 100%;
+  left: -40px;
+  top: 0;
+  width: 3px;
+  z-index: -1;
+}
+
+.list-sidebar > li ul li:hover::before {
+  background-color: rgb(233, 56, 56);
+  width: 200%;
+  -webkit-transition: width 0.3s ease-in;
+  transition: width 0.3s ease-in;
+}
+
+.list-sidebar .header {
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: #151515;
+  padding: 10px 15px 10px 30px;
+}
+
+.list-sidebar .header::before {
+  background-color: transparent;
+}
+
+a[aria-expanded="true"] {
+  background-color: rgb(79, 221, 60);
+}
