@@ -44,31 +44,53 @@ table {
 }
 
 /* BASE ============================================================ */
+@font-face {
+	font-family: Dejavu;
+	src: url(../Resources/Fonts/DejaVuSansMono.woff);
+}
+@font-face {
+	font-family: Dejavu;
+	src: url(../Resources/Fonts/DejaVuSansMono-Bold.woff);
+	font-weight: bold;
+}
+@font-face {
+	font-family: Dejavu;
+	src: url(../Resources/Fonts/DejaVuSansMono-Oblique.woff);
+	font-style: oblique;
+}
+@font-face {
+	font-family: Dejavu;
+	src: url(../Resources/Fonts/DejaVuSansMono-BoldOblique.woff);
+	font-style: oblique;
+	font-weight: bold;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #151515 !important;
+  background-color: #242121 !important;
 	font-size: 13px !important;
 	color: white !important;
 }
 
+
+
 #sidebar {
-	position: -webkit-sticky;
+	/* position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
 	position: -o-sticky;
-	position: sticky;
+	position: sticky; */
+	position: fixed;
+	
 }
 
-#footer {
-	position: -webkit-sticky;
-	position: -moz-sticky;
-	position: -ms-sticky;
-	position: -o-sticky;
-	position: sticky;
-  bottom: 0;
-  width: 100%;
+.right-side {
+	position: relative;
+	margin-left: 200px !important;
+
 }
+
 

@@ -5,7 +5,7 @@ a:hover {
 .sidebar-container,
 aside {
   position: fixed;
-  width: 150px;
+  width: 200px;
   height: 100%;
   left: 0;
   overflow-x: hidden;

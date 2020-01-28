@@ -1,18 +1,28 @@
 footer {
-    background-color: #1e1e1e;
-    color: white;
-    /* text-align: center; */
+  background-color: #1e1e1e;
+  color: white;
+  /* text-align: center; */
 }
 
 footer a {
-    color: inherit;
+  color: inherit;
 }
 
-footer>.contact {
-    padding: 10px 0;
+footer > .contact {
+  padding: 10px 0;
 }
 
 footer a:hover {
-    color: rgb(70, 181, 255);
-    text-decoration: none;
+  color: rgb(70, 181, 255);
+  text-decoration: none;
+}
+
+#footer {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
 }
