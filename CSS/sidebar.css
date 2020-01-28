@@ -5,12 +5,12 @@ a:hover {
 .sidebar-container,
 aside {
   position: fixed;
-  width: 220px;
+  width: 150px;
   height: 100%;
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background: #1a1a1a;
+  background: #1e1e1e;
   color: #fff;
 }
 
@@ -47,7 +47,7 @@ aside {
 }
 
 .list-sidebar > li::before {
-  background-color: rgb(79, 221, 60);
+  background-color: rgb(70, 181, 255);
   position: absolute;
   content: "";
   height: 100%;
@@ -57,26 +57,15 @@ aside {
   z-index: -1;
 }
 
-.list-sidebar > li ul li::before {
-  background-color: rgb(233, 56, 56);
-  position: absolute;
-  content: "";
-  height: 100%;
-  left: -40px;
-  top: 0;
-  width: 3px;
-  z-index: -1;
-}
-
-.list-sidebar > li ul li:hover::before {
-  background-color: rgb(233, 56, 56);
-  width: 200%;
+.list-sidebar > li:hover::before {
+  background-color: rgb(70, 181, 255);
+  width: 100%;
   -webkit-transition: width 0.3s ease-in;
   transition: width 0.3s ease-in;
 }
 
 .list-sidebar .header {
-  font-size: 12px;
+  font-size: 13px;
   text-transform: uppercase;
   background-color: #151515;
   padding: 10px 15px 10px 30px;
@@ -84,8 +73,4 @@ aside {
 
 .list-sidebar .header::before {
   background-color: transparent;
-}
-
-a[aria-expanded="true"] {
-  background-color: rgb(79, 221, 60);
 }

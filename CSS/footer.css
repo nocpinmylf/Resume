@@ -1,5 +1,5 @@
 footer {
-    background-color: rgb(70, 181, 255);
+    background-color: #1e1e1e;
     color: white;
     /* text-align: center; */
 }
@@ -13,6 +13,6 @@ footer>.contact {
 }
 
 footer a:hover {
-    color: rgb(202, 15, 15);
+    color: rgb(70, 181, 255);
     text-decoration: none;
 }
