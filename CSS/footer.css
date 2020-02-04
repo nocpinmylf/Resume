@@ -5,6 +5,7 @@ footer {
 }
 
 footer a {
+  position: relative;
   color: inherit;
 }
 
@@ -26,3 +27,4 @@ footer a:hover {
   bottom: 0;
   width: 100%;
 }
+

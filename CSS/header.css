@@ -1,0 +1,22 @@
+header {
+    background-color: #1e1e1e;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    padding-left: 200px;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+}
+
+#header>.custom-switch {
+    padding: 7px 20px 10px 0px;
+    text-align: end;
+}
+
+#header .custom-control-input:checked~.custom-control-label::before {
+    background-color: #242121;
+    border-color: #535050;
+}
