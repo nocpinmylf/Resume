@@ -1,91 +1,159 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <title>My Blog</title>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Le M. Duc">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"> 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Optional CSS -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../Javascript/include_html.js"></script>
 
-<head>
-  <title>My Blog</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
-    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="../CSS/style.css">
-  <script src="../Javascript/include_html.js"></script>
-</head>
+  </head>
+  <body>
+    <div include-html="header.html"></div>
 
-<body>
-  <div include-html="header.html"></div>
-  <div class="main d-flex flex-row">
-    <div class="left-side" include-html="sidebar.html"></div>
-    <div class="right-side container-fluid">
-      <div class="row">
-        <div class=" col-sm-12 col-xl-12">
-          <h1>LÊ MINH ĐỨC</h1>
+    <div class="main d-flex flex-row">
+      <div class="left-side" include-html="sidebar.html"></div>
+      <div class="right-side container-fluid">
+        <div class="row">
+          <div class=" col-sm-12 col-xl-12">
+            <h1>LÊ MINH ĐỨC</h1>
+          </div>
         </div>
+        <div class="resume-content">
 
+          <!-- left of resume -->
+          <div class="left-of-resume">
+            <div class="content" id="profile-section">
+              <h1 class="content-header">About Me</h1>
+              <div class="container quote">"I am a junior student at Water Resources University. Since I was young, I have had a wish to write some websites for my own purposes. Presently I am looking for an Internship to pursue my aspiration."</div>
+            </div>
+
+            <div class="content" id="education-section">
+              <h1 class="content-header">Education</h1>
+              <div class="container">
+                <div class="row d-flex justify-content-between container">
+                  <div class="school">Water Resources University</div>
+                  <div class="start-finish">2017 - Present</div>
+                </div>
+                <div class="study-major">Information Technology
+                  <table class="table table-dark">
+                    <thead>
+                      <th>Subject</th>
+                      <th>Grade</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Database Management System</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Advanced Programming (C# Winform)</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>English For IT</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Data Structures And Algorithms</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Java Programming</td>
+                        <td>B</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="2">...</td>
+                      </tr>
+                      <caption>List Of Subjects</caption>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="content" id="qualification-section">
+              <h1 class="content-header">Qualifications</h1>
+              <div class="container">
+                <ul>
+                  <li>Adaptability. I can learn new programming languages, new technologies from the Internet, documentaries or whatever sources whenever.</li>
+                  <li>Critical Thinking. See opinion in differents views</li>
+                  <li>Active Listening. 
+                    <span class="quote">"The art of conversation lies in listening." -- Malcom Forbes</span>
+                  </li>
+                  <li>Analytical. Figure out root of the problem and give solution to handle it</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="content" id="certification-section">
+              <h1 class="content-header">Certification</h1>
+              <div class="container">Ecorp English, Elementary English For Life Certification. 2019</div>
+            </div>
+          </div>
+
+          <!-- right of resume -->
+          <div class="right-of-resume">
+            <div class="content" id="skill-section">
+              <h1 class="content-header">Skills</h1>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>Git</li>
+              </ul>
+            </div>
+
+            <div class="content" id="language-section">
+              <h1 class="content-header">Languages</h1>
+              <ul>
+                <li>English</li>
+                <li>Japanese</li>
+              </ul>
+            </div>
+
+            <div class="content" id="interest-section">
+              <h1 class="content-header">Interests</h1>
+              <ul>
+                <li>Reading</li>
+                <li>Sport</li>
+                <li>Music</li>
+                <li>Psychology</li>
+                <li>Investing</li>
+                <li>Traveling</li>
+              </ul>
+            </div>
+
+            <div class="content" id="activity-section">
+              <h1 class="content-header">Activities</h1>
+              <div class="container">Participating in TLU Swimming Club</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="resume-content">
-        <div class="left-of-resume">
-          <div class="content">
-            <h1 class="content-header">About Me</h1>
-            <div class="container about-me">"I am a junior student at water resources university. Since I was young I had a wish to write a website for my own. Now I am looking for an internship to make this dream come true. "</div>
-          </div>
-          <div class="content">
-            <h1 class="content-header">Education</h1>
-            <div class="container">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-          </div>
-          <div class="content">
-            <h1 class="content-header">Projects</h1>
-            <div class="container">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-          </div>
-          <div class="content">
-            <h1 class="content-header">Qualifications</h1>
-            <div class="container">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-          </div>
-        </div>
-        <div class="right-of-resume">
-          <div class="content">
-            <h1 class="content-header">Interests</h1>
-            <div class="container">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-          </div>
-          <div class="content">
-            <h1 class="content-header">Skills</h1>
-            <div class="container">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-          </div>
-          <div class="content">
-            <h1 class="content-header">Languages</h1>
-            <div class="container">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-          </div>
-          <div class="content">
-            <h1 class="content-header">Volunteering</h1>
-            <div class="container">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-          </div>
-        </div>
-      </div>
-
-
     </div>
-  </div>
-  <div include-html="footer.html"></div>
 
-  <!-- Optional JavaScript -->
-  <script>includeHTML();</script>
-  <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js"
-    integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
-    crossorigin="anonymous"></script>
+    <div include-html="footer.html"></div>
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-</body>
-
+    <!-- Optional JavaScript -->
+    <script>includeHTML();</script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
 </html>

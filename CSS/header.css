@@ -20,3 +20,7 @@ header {
     background-color: #242121;
     border-color: #535050;
 }
+
+/* label.custom-control-label::before:focus {
+  outline: none;
+} */
