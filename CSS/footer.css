@@ -1,19 +1,20 @@
-footer {
+#footer {
   background-color: #1e1e1e;
   color: white;
   /* text-align: center; */
 }
 
-footer a {
+#footer a {
   position: relative;
   color: inherit;
+  margin: 0 -80px;
 }
 
-footer > .contact {
+#footer > .contact {
   padding: 10px 0;
 }
 
-footer a:hover {
+#footer a:hover {
   color: rgb(70, 181, 255);
   text-decoration: none;
 }
@@ -31,4 +32,3 @@ footer a:hover {
 .copyright {
   text-align: center;
 }
-

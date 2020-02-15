@@ -1,4 +1,7 @@
-/* BASE ============================================================ */
+:root {
+	--base-color: rgb(70,181,255);
+}
+
 @font-face {
 	font-family: Dejavu;
 	src: url(../Resources/Fonts/DejaVuSansMono.woff);
@@ -20,26 +23,57 @@
 	font-weight: bold;
 }
 
+@keyframes fill-progress-bar {
+	from {
+		width: 0;
+		background-color: var(--base-color);
+	}
+}
+
+@-webkit-keyframes fill-progress-bar {
+	from {
+		width: 0;
+		background-color: var(--base-color);
+	}
+}
+
 html {
 	scroll-behavior: smooth;
 	font-family: Dejavu;
 }
 
 body {
-  background-color: #242121 !important;
+  /* background-color: #242121 !important; */
 	font-size: 13px !important;
 	color: white !important;
 	font-family: Dejavu;
+	background:
+	-o-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+	-o-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+	-o-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+	-o-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+	-o-linear-gradient(left, #1b1b1b 10px, transparent 10px),
+	-o-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+	background:
+	linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+	linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+	linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+	linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+	linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+	linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+	background-color: #131313;
+	background-size: 20px 20px;
 }
 
 html, body {
 	margin: 0;
-   }
+}
 
 /* MAIN ============================================ */
 /* =================HEADER===================== */
 #header {
 	font-family: Dejavu;
+	width: 100%;
 }
 
 /* =================SIDEBAR==================== */
@@ -55,6 +89,7 @@ html, body {
 }
 
 /* =================RIGHT SIDE================= */
+
 .right-side{
 	position: relative;
 	margin-left: 200px !important;
@@ -68,43 +103,182 @@ html, body {
 	padding-bottom: 10px;
 }
 
-.resume-content {
+.resume-body {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
+.content {
+	margin: 30px 10px 20px 0px;
+	padding: 0 10px;
+	text-align: justify;
+}
+
+.content-header::after {
+	display: block;
+	border-radius: 5px;
+	content: "";
+	height: 1px;
+	width: 250px;
+	margin-top: 5px;
+	background-color: rgb(134, 124, 105);
+}
+
+.content-header {
+	color: #368a2b;
+	font-size: 25px;
+	margin-bottom: 15px;
+}
+
+#my-name {
+	padding-top: 40px;
+	text-align: center;
+	font-size: 55px;
+	font-weight: bold;
+	text-shadow: -3px 3px 0 rgb(58, 57, 57);
+}
+
+/* left of resume !!!!!!!!!!!!!! */
 .left-of-resume {
 	width: 60%;
 	height: 100%;
 }
 
+/* profile */
+.blockquote {
+	font-style: italic;
+	font-size: 13px;
+	border-radius: 15px;
+	background-color: rgb(98, 96, 94);
+	padding: 10px;
+}
+
+/* education */
+.school {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.start-finish {
+	font-style: italic;
+	font-size: 12px;
+}
+
+.study-major {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.study-major>table {
+	text-align: center;
+	width: 100%;
+	background-image: linear-gradient(297deg, #60043b, #860430, #ab0623, #d10a0f);
+	margin-top: 20px;
+	border-radius: 15px;
+	border-collapse: collapse; 
+	
+}
+
+.study-major th {
+	border-bottom: 2px double rgb(134, 124, 105);
+	font-weight: bold;
+}
+
+.study-major tr {
+	border-bottom: 1px solid rgb(134, 124, 105);
+}
+
+.study-major tfoot>tr {
+	border-bottom: transparent;
+}
+
+.study-major td, .study-major th {
+	padding: 0.5rem;
+}
+
+/* qualification */
+#qualification-section ul>li {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+#qualification-section ul>li::before {
+	font-family: "Font Awesome 5 Free";
+	content: "\f004";
+	font-weight: 900;
+	font-size: inherit;
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center;
+	color: rgb(233, 41, 73);
+}
+
+#qualification-section ul>li>div {
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center;
+}
+
+#qualification-section ul>li>span {
+	padding: 5px;
+	-ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center;
+	border-radius: 15px;
+	margin: 10px;
+}
+
+#Q1 {
+	background-color: rgb(0, 11, 165);
+}
+#Q2 {
+	background-color: rgb(4, 119, 0);
+}
+#Q3 {
+	background-color: rgb(177, 150, 0);
+}
+#Q4 {
+	background-color: rgb(158, 0, 158);
+}
+#Q5 {
+	background-color: rgb(168, 0, 0);
+}
+
+/* certification */
+
+/* right of resume !!!!!!!!!!!!!! */
 .right-of-resume {
 	width: 40%;
 	height: 100%;
 }
 
-.content {
-	margin: 50px 10px 20px 0px;
-	padding: 0 10px;
-	text-align: justify;
+/* skill */
+#skill-section .progress {
+	margin-bottom: 15px;
+	height: 5px;
 }
 
-.content::before {
-	display: block;
-	border-radius: 4px;
-	content: "";
-	height: 3px;
-	width: 100px;
-	background-color: rgb(70, 181, 255);
-	margin: 20px 0 8px 0;
+#skill-section .progress-bar {
+	background: -webkit-gradient(linear, left top, right top, from(rgba(70,181,255,1)), color-stop(50%, rgba(123,38,233,1)), color-stop(100%, rgba(255,0,0,1)), to(rgba(0,212,255,1)));
+	background: -o-linear-gradient(left, rgba(70,181,255,1) 0%, rgba(123,38,233,1) 50%, rgba(255,0,0,1) 100%, rgba(0,212,255,1) 100%);
+	background: linear-gradient(90deg, rgba(70,181,255,1) 0%, rgba(123,38,233,1) 50%, rgba(255,0,0,1) 100%, rgba(0,212,255,1) 100%);
+	-webkit-animation: fill-progress-bar 0.8s ease-in-out;
+	animation: fill-progress-bar 0.8s ease-in-out;
 }
 
-.quote {
-	font-style: italic;
+/* language */
+#language-section li {
+	margin-bottom: 20px;
 }
 
-.study-major table {
-	text-align: center;
+#language-section ul>li>i {
+	color: #d6ba33;
 }
+
+/* activity */
+
 /* =================FOOTER===================== */
 #footer {
 	font-family: Dejavu;
