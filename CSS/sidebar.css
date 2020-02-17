@@ -2,6 +2,10 @@ a:hover {
   text-decoration: none;
 }
 
+.banner img {
+  margin: 8px 5px;
+}
+
 #resume-menu::after {
   content: "Resume";
   font-family: Dejavu;
