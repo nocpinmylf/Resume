@@ -1,191 +1,284 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>My Blog</title>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Le M. Duc">
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"> 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Optional CSS -->
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="icon" type=“image/x-icon” href="/Resources/Images/favicon.ico">
-    <script src="Javascript/include_html.js"></script>
-    <script src="Javascript/html5shiv.min.js"></script>
 
-  </head>
-  <body>
-    <div include-html="header.html"></div>
+<head>
+  <title>My Blog</title>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Le M. Duc">
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Optional CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="icon" type=“image/x-icon” href="/Resources/Images/favicon.ico">
+  <script src="Javascript/html5shiv.min.js"></script>
 
-    <div class="main d-flex flex-row">
-      <div class="left-side" include-html="sidebar.html"></div>
-      <div class="right-side container-fluid">
-        <div id="my-name">LÊ MINH ĐỨC</div>
-        <div class="resume-body">
+</head>
 
-          <!-- left of resume -->
-          <div class="left-of-resume">
-            <div class="content" id="profile-section">
-              <h1 class="content-header">&#60;About Me&#62;</h1>
-                <blockquote class="blockquote">
-                  "I have had a wish to develop websites. Presently I am looking for an Internship to pursue my aspiration."
-                </blockquote>
-            </div>
+<body>
+  <header id="header">
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="customSwitches" checked>
+      <label class="custom-control-label" for="customSwitches"></label>
+    </div>
+  </header>
 
-            <div class="content" id="education-section">
-              <h1 class="content-header">&#60;Education&#62;</h1>
-              <div class="container">
-                <div class="row d-flex justify-content-between container">
-                  <div class="school">Water Resources University</div>
-                  <div class="start-finish">2017 - Present</div>
-                </div>
-                <div class="study-major"><i class="fas fa-graduation-cap"></i> Information Technology
-                  <table>
-                    <thead>
-                      <th>Subject</th>
-                      <th>Grade</th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Database Management System</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Advanced Programming (C# Winform)</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>English For IT</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Data Structures And Algorithms</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Java Programming</td>
-                        <td>B</td>
-                      </tr>
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <td colspan="2">...</td>
-                      </tr>
-                      <caption>List Of Subjects</caption>
-                    </tfoot>
-                  </table>
-                </div>
+  <div class="main d-flex flex-row">
+    <aside id="sidebar">
+      <div class="sidebar left">
+        <ul class="list-sidebar bg-defoult">
+          <a class="banner" href="index.html">
+            <img src="Resources/Images/banner.png" alt="Banner" width="180px" height="40px">
+          </a>
+          <li class="header">Main</li>
+          <li>
+            <a href="#">
+              <i class="fa fa-home" aria-hidden="true" id="resume-menu"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-pen" aria-hidden="true" id="writing-menu"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-users" aria-hidden="true" id="sharing-menu"></i>
+            </a>
+          </li>
+          <li class="header">Other</li>
+          <li>
+            <a href="#footer"><i class="fas fa-info-circle" aria-hidden="true" id="contact-menu"></i></a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    
+    <div class="right-side container-fluid">
+      <div id="my-name">LÊ MINH ĐỨC</div>
+      <div class="resume-body">
+
+        <!-- left of resume -->
+        <div class="left-of-resume">
+          <div class="content" id="profile-section">
+            <h1 class="content-header">&#60;About Me&#62;</h1>
+            <blockquote class="blockquote">
+              "I have had a wish to develop websites. Presently I am looking for an Internship to pursue my aspiration."
+            </blockquote>
+          </div>
+
+          <div class="content" id="education-section">
+            <h1 class="content-header">&#60;Education&#62;</h1>
+            <div class="container">
+              <div class="row d-flex justify-content-between container">
+                <div class="school">Water Resources University</div>
+                <div class="start-finish">2017 - Present</div>
               </div>
-            </div>
-
-            <div class="content" id="qualification-section">
-              <h1 class="content-header">&#60;Qualifications&#62;</h1>
-              <div class="container">
-                <ul>
-                  <li><span id="Q1">Empathy</span><div>Put myself in other's shoes.</div></li>
-                  <li><span id="Q2">Analytical</span><div> Figure out root of the problem and give the solution to handle it.</div></li>
-                  <li><span id="Q3">Adaptability</span><div> I am able to learn new programming languages, cutting-edge technologies from various sources.</div></li>
-                  <li><span id="Q4">Communication</span><div> Proactive, confident, optimistic and open-minded.</div></li>
-                  <li><span id="Q5">Critical Thinking</span><div> See opinion in different views.</div></li>
-                </ul>
+              <div class="study-major"><i class="fas fa-graduation-cap"></i> Information Technology
+                <table>
+                  <thead>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Database Management System</td>
+                      <td>A</td>
+                    </tr>
+                    <tr>
+                      <td>Advanced Programming (C# Winform)</td>
+                      <td>A</td>
+                    </tr>
+                    <tr>
+                      <td>English For IT</td>
+                      <td>A</td>
+                    </tr>
+                    <tr>
+                      <td>Data Structures And Algorithms</td>
+                      <td>A</td>
+                    </tr>
+                    <tr>
+                      <td>Java Programming</td>
+                      <td>B</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2"><b>...</b></td>
+                    </tr>
+                    <caption>List Of Subjects</caption>
+                  </tfoot>
+                </table>
               </div>
-            </div>
-
-            <div class="content" id="certification-section">
-              <h1 class="content-header">&#60;Certification&#62;</h1>
-              <div class="container"><i class="fas fa-certificate"></i> Ecorp English, Elementary English For Life Certification. 2019</div>
             </div>
           </div>
 
-          <!-- right of resume -->
-          <div class="right-of-resume">
-            <div class="content" id="skill-section">
-              <h1 class="content-header">&#60;Skills&#62;</h1>
+          <div class="content" id="qualification-section">
+            <h1 class="content-header">&#60;Qualifications&#62;</h1>
+            <div class="container">
               <ul>
-                <li>HTML
-                  <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                <li><span id="Q1">Empathy</span>
+                  <div>Put myself in other's shoes.</div>
+                </li>
+                <li><span id="Q2">Analytical</span>
+                  <div> Figure out root of the problem and give the solution to handle it.</div>
+                </li>
+                <li><span id="Q3">Adaptability</span>
+                  <div> I am able to learn new programming languages, cutting-edge technologies from various sources.
                   </div>
                 </li>
-                <li>CSS
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+                <li><span id="Q4">Communication</span>
+                  <div> Proactive, confident, optimistic and open-minded.</div>
                 </li>
-                <li>JavaScript
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </li>
-                <li>SQL
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </li>
-                <li>Git
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+                <li><span id="Q5">Critical Thinking</span>
+                  <div> See opinion in different views.</div>
                 </li>
               </ul>
             </div>
+          </div>
 
-            <div class="content" id="language-section">
-              <h1 class="content-header">&#60;Languages&#62;</h1>
-              <ul>
-                <li>English
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </li>
-                
-                <li>Japanese
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </li>
-              </ul>
-            </div>
+          <div class="content" id="certification-section">
+            <h1 class="content-header">&#60;Certification&#62;</h1>
+            <div class="container"><i class="fas fa-certificate"></i> Ecorp English, Elementary English For Life
+              Certification. 2019</div>
+          </div>
+        </div>
 
-            <div class="content" id="interest-section">
-              <h1 class="content-header">&#60;Interests&#62;</h1>
-              <ul>
-                <li><i class="fas fa-book-reader"></i> Read</li>
-                <li><i class="fas fa-running"></i> Sport</li>
-                <li><i class="fas fa-headphones-alt"></i> Music</li>
-                <li><i class="fas fa-brain"></i> Psychology</li>
-                <li><i class="fas fa-chart-line"></i> Investment</li>
-                <li><i class="fas fa-route"></i> Travel</li>
-              </ul>
-            </div>
+        <!-- right of resume -->
+        <div class="right-of-resume">
+          <div class="content" id="skill-section">
+            <h1 class="content-header">&#60;Skills&#62;</h1>
+            <ul>
+              <li>HTML
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="60" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li>CSS
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="60" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li>JavaScript
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li>SQL
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li>Git
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
 
-            <div class="content" id="activity-section">
-              <h1 class="content-header">&#60;Activity&#62;</h1>
-              <div class="container">Participate in TLU Swimming Club <i class="fas fa-swimmer"></i></div>
-            </div>
+          <div class="content" id="language-section">
+            <h1 class="content-header">&#60;Languages&#62;</h1>
+            <ul>
+              <li>English
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </li>
+
+              <li>Japanese
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </li>
+            </ul>
+          </div>
+
+          <div class="content" id="interest-section">
+            <h1 class="content-header">&#60;Interests&#62;</h1>
+            <ul>
+              <li><i class="fas fa-book-reader"></i> Read</li>
+              <li><i class="fas fa-running"></i> Sport</li>
+              <li><i class="fas fa-headphones-alt"></i> Music</li>
+              <li><i class="fas fa-brain"></i> Psychology</li>
+              <li><i class="fas fa-chart-line"></i> Investment</li>
+              <li><i class="fas fa-route"></i> Travel</li>
+            </ul>
+          </div>
+
+          <div class="content" id="activity-section">
+            <h1 class="content-header">&#60;Activity&#62;</h1>
+            <div class="container">Participate in TLU Swimming Club <i class="fas fa-swimmer"></i></div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div include-html="footer.html"></div>
+  <footer id="footer">
+    <div class="contact d-flex justify-content-around">
+      <div class="col-3"></div>
+      <div class="col-3">
+        <div class="phone">
+          <a href="tel:+84327701953"><i class="fas fa-phone"></i> 032.770.1953</a></div>
+        <a href="https://www.google.com/maps/place/Tây+Hồ,+Hà+Nội,+Việt+Nam/@21.0691834,105.7897912,13.39z/data=!4m5!3m4!1s0x3135aae54053e2d5:0x2d72b1d7c422234b!8m2!3d21.0811211!4d105.8180306?hl=vi-VN"
+          target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marked-alt"></i> Tay Ho, Ha Noi</a>
+      </div>
+      <div class="col-3">
+        <div class="email">
+          <a href="mailto:lemduc@hotmail.com?subject=[Blog]" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i>
+            lemduc@hotmail.com</a>
+          <div class="w-100"></div>
+          <a href="mailto:duclm72@wru.vn?subject=[Blog]" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i>
+            duclm72@wru.vn</a>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="social">
+          <a href="https://www.facebook.com/nocpinmylf" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i>
+            Facebook</a>
+          <div class="w-100"></div>
+          <a href="https://github.com/nocpinmylf" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> Github</a>
+          <div class="w-100"></div>
+          <a href="https://www.freecodecamp.org/nocpinmylf" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-free-code-camp"></i>
+            Free Code Camp
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">Le M. Duc &copy; 2020.</div>
+  </footer>
 
-    <!-- Optional JavaScript -->
-    <script>includeHTML();</script>
-    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+  <!-- Optional JavaScript -->
+  <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"
+    integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
+    crossorigin="anonymous"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

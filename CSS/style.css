@@ -1,21 +1,24 @@
 :root {
-	--base-color: rgb(70,181,255);
+	--base-color: rgb(70, 181, 255);
 }
 
 @font-face {
 	font-family: Dejavu;
 	src: url(../Resources/Fonts/DejaVuSansMono.woff);
 }
+
 @font-face {
 	font-family: Dejavu;
 	src: url(../Resources/Fonts/DejaVuSansMono-Bold.woff);
 	font-weight: bold;
 }
+
 @font-face {
 	font-family: Dejavu;
 	src: url(../Resources/Fonts/DejaVuSansMono-Oblique.woff);
 	font-style: oblique;
 }
+
 @font-face {
 	font-family: Dejavu;
 	src: url(../Resources/Fonts/DejaVuSansMono-BoldOblique.woff);
@@ -37,32 +40,30 @@
 	}
 }
 
+/* @media all and (max-width: 480px) {
+	#side-bar {
+		position: relative;
+		color: rgb(6, 6, 165);
+	}
+	aside {
+		width: 100%;
+		height: 350px;
+		float: left;
+	}
+} */
+
 html {
 	scroll-behavior: smooth;
 	font-family: Dejavu;
 }
 
 body {
-  /* background-color: #242121 !important; */
-	font-size: 13px !important;
-	color: white !important;
+	/* background-color: #242121; */
+	font-size: 13px;
+	color: white;
 	font-family: Dejavu;
-	background:
-	-o-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
-	-o-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
-	-o-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
-	-o-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
-	-o-linear-gradient(left, #1b1b1b 10px, transparent 10px),
-	-o-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-	background:
-	linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-	linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-	linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-	linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-	linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-	linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-	background-color: #131313;
-	background-size: 20px 20px;
+	background: url(../Resources/Images/background.png);
+	background-repeat: repeat;
 }
 
 html, body {
@@ -70,13 +71,32 @@ html, body {
 }
 
 /* MAIN ============================================ */
+
 /* =================HEADER===================== */
-#header {
+
+header {
+	background-color: #252525;
+	top: 0;
+	height: 56px;
+	width: 100%;
+	padding-left: 200px;
+	position: fixed;
 	font-family: Dejavu;
 	width: 100%;
 }
 
+#header>.custom-switch {
+	padding: 7px 20px 10px 0px;
+	text-align: end;
+}
+
+#header .custom-control-input:checked~.custom-control-label::before {
+	background-color: #242121;
+	border-color: #535050;
+}
+
 /* =================SIDEBAR==================== */
+
 #sidebar {
 	/* position: -webkit-sticky;
 	position: -moz-sticky;
@@ -88,9 +108,120 @@ html, body {
 	top: 0;
 }
 
+.banner img {
+	max-width: 100%;
+	height: auto;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.banner img {
+	margin: 8px 5px;
+}
+
+#resume-menu::after {
+	content: "Resume";
+	font-family: Dejavu;
+	font-weight: 300;
+	margin-left: 8px;
+}
+
+#writing-menu::after {
+	content: "Writing";
+	font-family: Dejavu;
+	font-weight: 300;
+	margin-left: 10px;
+}
+
+#sharing-menu::after {
+	content: "Sharing";
+	font-family: Dejavu;
+	font-weight: 300;
+	margin-left: 7px;
+}
+
+#contact-menu::after {
+	content: "Contact";
+	font-family: Dejavu;
+	font-weight: 300;
+	margin-left: 7px;
+}
+
+aside {
+	width: 190px;
+	height: 100%;
+	left: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: #252525;
+	color: #fff;
+}
+
+.list-sidebar {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	position: relative;
+}
+
+.list-sidebar li {
+	background-color: transparent;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	line-height: 20px;
+}
+
+.list-sidebar li a {
+	padding: 10px 15px 10px 30px;
+	display: block;
+	color: #fff;
+}
+
+.list-sidebar li .fa {
+	margin-right: 10px;
+}
+
+.list-sidebar li a:active, .list-sidebar li a:hover, .list-sidebar li a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+.list-sidebar>li::before {
+	background-color: rgb(70, 181, 255);
+	position: absolute;
+	content: "";
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: 3px;
+	z-index: -1;
+}
+
+.list-sidebar>li:hover::before {
+	background-color: rgb(70, 181, 255);
+	width: 100%;
+	-webkit-transition: width 0.3s ease-in;
+	-o-transition: width 0.3s ease-in;
+	transition: width 0.3s ease-in;
+}
+
+.list-sidebar .header {
+	font-size: 13px;
+	text-transform: uppercase;
+	background-color: #1e1e1e;
+	padding: 10px 15px 10px 30px;
+}
+
+.list-sidebar .header::before {
+	background-color: transparent;
+}
+
 /* =================RIGHT SIDE================= */
 
-.right-side{
+.right-side {
 	position: relative;
 	margin-left: 200px !important;
 	z-index: -1;
@@ -132,7 +263,7 @@ html, body {
 }
 
 #my-name {
-	padding-top: 40px;
+	padding-top: 75px;
 	text-align: center;
 	font-size: 55px;
 	font-weight: bold;
@@ -140,12 +271,14 @@ html, body {
 }
 
 /* left of resume !!!!!!!!!!!!!! */
+
 .left-of-resume {
 	width: 60%;
 	height: 100%;
 }
 
 /* profile */
+
 .blockquote {
 	font-style: italic;
 	font-size: 13px;
@@ -155,6 +288,7 @@ html, body {
 }
 
 /* education */
+
 .school {
 	font-weight: bold;
 	font-size: 15px;
@@ -177,8 +311,7 @@ html, body {
 	background-image: -o-linear-gradient(153deg, #60043b, #860430, #ab0623, #d10a0f);
 	margin-top: 20px;
 	border-radius: 15px;
-	border-collapse: collapse; 
-	
+	border-collapse: collapse;
 }
 
 .study-major th {
@@ -199,6 +332,7 @@ html, body {
 }
 
 /* qualification */
+
 #qualification-section ul>li {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -234,15 +368,19 @@ html, body {
 #Q1 {
 	background-color: rgb(0, 11, 165);
 }
+
 #Q2 {
 	background-color: rgb(4, 119, 0);
 }
+
 #Q3 {
 	background-color: rgb(177, 150, 0);
 }
+
 #Q4 {
 	background-color: rgb(158, 0, 158);
 }
+
 #Q5 {
 	background-color: rgb(168, 0, 0);
 }
@@ -250,26 +388,29 @@ html, body {
 /* certification */
 
 /* right of resume !!!!!!!!!!!!!! */
+
 .right-of-resume {
 	width: 40%;
 	height: 100%;
 }
 
 /* skill */
+
 #skill-section .progress {
 	margin-bottom: 15px;
 	height: 5px;
 }
 
 #skill-section .progress-bar {
-	background: -webkit-gradient(linear, left top, right top, from(rgba(70,181,255,1)), color-stop(50%, rgba(123,38,233,1)), color-stop(100%, rgba(255,0,0,1)), to(rgba(0,212,255,1)));
-	background: -o-linear-gradient(left, rgba(70,181,255,1) 0%, rgba(123,38,233,1) 50%, rgba(255,0,0,1) 100%, rgba(0,212,255,1) 100%);
-	background: linear-gradient(90deg, rgba(70,181,255,1) 0%, rgba(123,38,233,1) 50%, rgba(255,0,0,1) 100%, rgba(0,212,255,1) 100%);
+	background: -webkit-gradient(linear, left top, right top, from(rgba(70, 181, 255, 1)), color-stop(50%, rgba(123, 38, 233, 1)), color-stop(100%, rgba(255, 0, 0, 1)), to(rgba(0, 212, 255, 1)));
+	background: -o-linear-gradient(left, rgba(70, 181, 255, 1) 0%, rgba(123, 38, 233, 1) 50%, rgba(255, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
+	background: linear-gradient(90deg, rgba(70, 181, 255, 1) 0%, rgba(123, 38, 233, 1) 50%, rgba(255, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
 	-webkit-animation: fill-progress-bar 0.8s ease-in-out;
 	animation: fill-progress-bar 0.8s ease-in-out;
 }
 
 /* language */
+
 #language-section li {
 	margin-bottom: 20px;
 }
@@ -281,6 +422,30 @@ html, body {
 /* activity */
 
 /* =================FOOTER===================== */
+
 #footer {
+	background-color: #252525;
+	color: white;
 	font-family: Dejavu;
+	bottom: 0;
+	width: 100%;
+}
+
+#footer a {
+	position: relative;
+	color: inherit;
+	margin: 0 -80px;
+}
+
+#footer>.contact {
+	padding: 10px 0;
+}
+
+#footer a:hover {
+	color: rgb(70, 181, 255);
+	text-decoration: none;
+}
+
+.copyright {
+	text-align: center;
 }
