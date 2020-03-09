@@ -40,198 +40,144 @@
 	}
 }
 
-/* @media all and (max-width: 480px) {
-	#side-bar {
-		position: relative;
-		color: rgb(6, 6, 165);
-	}
-	aside {
-		width: 100%;
-		height: 350px;
-		float: left;
-	}
-} */
+#header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: head;
+}
+#sidebar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: side;
+}
+#main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: main;
+}
+#footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: foot;
+}
 
 html {
-	scroll-behavior: smooth;
-	font-family: Dejavu;
+  scroll-behavior: smooth;
+  font-size: 13px;
 }
 
-body {
-	/* background-color: #242121; */
-	font-size: 13px;
-	color: white;
-	font-family: Dejavu;
-	background: url(../Resources/Images/background.png);
-	background-repeat: repeat;
-}
-
-html, body {
+body.row {
+  color: white;
+  font-family: Dejavu;
+  background: url(../Resources/Images/background.png);
+  background-repeat: repeat;
+	display: -ms-grid;
+	display: grid;
 	margin: 0;
+	-ms-grid-rows: 8vh 1fr 8.5vw;
+  -ms-grid-columns: 15.5vw 83.5vw;
+  grid-template-rows: 8vh 1fr 8.5vw;
+	grid-template-columns: 15.5vw 83.5vw;
+	grid-template-areas:  "side head" 
+						            "side main" 
+                        "side foot";        
 }
 
 /* MAIN ============================================ */
-
 /* =================HEADER===================== */
 
 header {
 	background-color: #252525;
-	top: 0;
-	height: 56px;
+	height: 8vh;
 	width: 100%;
-	padding-left: 200px;
-	position: fixed;
 	font-family: Dejavu;
-	width: 100%;
+	z-index: 1;
 }
 
-#header>.custom-switch {
+/* #header>.custom-switch {
 	padding: 7px 20px 10px 0px;
 	text-align: end;
-}
-
-#header .custom-control-input:checked~.custom-control-label::before {
-	background-color: #242121;
-	border-color: #535050;
-}
+} */
 
 /* =================SIDEBAR==================== */
-
 #sidebar {
-	/* position: -webkit-sticky;
-	position: -moz-sticky;
-	position: -ms-sticky;
-	position: -o-sticky;
-	position: sticky; */
 	position: fixed;
 	font-family: Dejavu;
 	top: 0;
-}
-
-.banner img {
-	max-width: 100%;
-	height: auto;
-}
-
-a:hover {
-	text-decoration: none;
-}
-
-.banner img {
-	margin: 8px 5px;
-}
-
-#resume-menu::after {
-	content: "Resume";
-	font-family: Dejavu;
-	font-weight: 300;
-	margin-left: 8px;
-}
-
-#writing-menu::after {
-	content: "Writing";
-	font-family: Dejavu;
-	font-weight: 300;
-	margin-left: 10px;
-}
-
-#sharing-menu::after {
-	content: "Sharing";
-	font-family: Dejavu;
-	font-weight: 300;
-	margin-left: 7px;
-}
-
-#contact-menu::after {
-	content: "Contact";
-	font-family: Dejavu;
-	font-weight: 300;
-	margin-left: 7px;
+	z-index: 1;
 }
 
 aside {
-	width: 190px;
+	width: 16vw;
 	height: 100%;
-	left: 0;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: hidden;
 	background: #252525;
-	color: #fff;
 }
 
-.list-sidebar {
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-	position: relative;
-}
-
-.list-sidebar li {
-	background-color: transparent;
-	position: relative;
-	display: inline-block;
+.banner img {
+	max-width: 95%;
 	width: 100%;
-	line-height: 20px;
+	height: auto;
+	margin: 8px 5px;
+}
+
+#sidebar span {
+  font-family: Dejavu;
+  font-weight: 300;
+  margin-left: 1vw;
+}
+
+#sidebar li {
+  text-align: center;
+  position: relative;
+  line-height: 30px;
+}
+
+.list-sidebar .header {
+	background-color: #1e1e1e;
+	padding: 10px;
 }
 
 .list-sidebar li a {
-	padding: 10px 15px 10px 30px;
+	padding: 10px;
 	display: block;
 	color: #fff;
 }
 
-.list-sidebar li .fa {
-	margin-right: 10px;
-}
-
-.list-sidebar li a:active, .list-sidebar li a:hover, .list-sidebar li a:focus {
-	text-decoration: none;
-	outline: none;
-}
-
 .list-sidebar>li::before {
-	background-color: rgb(70, 181, 255);
+	background-color: var(--base-color);
 	position: absolute;
 	content: "";
 	height: 100%;
 	left: 0;
 	top: 0;
 	width: 3px;
-	z-index: -1;
 }
 
 .list-sidebar>li:hover::before {
-	background-color: rgb(70, 181, 255);
+	background-color: var(--base-color);
 	width: 100%;
 	-webkit-transition: width 0.3s ease-in;
 	-o-transition: width 0.3s ease-in;
 	transition: width 0.3s ease-in;
+	z-index: -1;
 }
 
-.list-sidebar .header {
-	font-size: 13px;
-	text-transform: uppercase;
-	background-color: #1e1e1e;
-	padding: 10px 15px 10px 30px;
-}
-
+.list-sidebar .header:hover::before,
 .list-sidebar .header::before {
 	background-color: transparent;
 }
 
 /* =================RIGHT SIDE================= */
 
-.right-side {
-	position: relative;
-	margin-left: 200px !important;
-	z-index: -1;
-	font-family: Dejavu;
-}
-
-.right-side>.row h1 {
+#my-name {
+	padding-top: 50px;
 	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	font-size: 55px;
+	font-weight: bold;
+	text-shadow: -3px 3px 0 rgb(58, 57, 57);
 }
 
 .resume-body {
@@ -241,8 +187,8 @@ aside {
 }
 
 .content {
-	margin: 30px 10px 20px 0px;
-	padding: 0 10px;
+	margin: 30px 10px;
+	padding: 0 20px;
 	text-align: justify;
 }
 
@@ -250,7 +196,7 @@ aside {
 	display: block;
 	border-radius: 5px;
 	content: "";
-	height: 1px;
+	height: 0.1vh;
 	width: 250px;
 	margin-top: 5px;
 	background-color: rgb(134, 124, 105);
@@ -262,19 +208,10 @@ aside {
 	margin-bottom: 15px;
 }
 
-#my-name {
-	padding-top: 75px;
-	text-align: center;
-	font-size: 55px;
-	font-weight: bold;
-	text-shadow: -3px 3px 0 rgb(58, 57, 57);
-}
-
 /* left of resume !!!!!!!!!!!!!! */
 
 .left-of-resume {
 	width: 60%;
-	height: 100%;
 }
 
 /* profile */
@@ -311,7 +248,6 @@ aside {
 	background-image: -o-linear-gradient(153deg, #60043b, #860430, #ab0623, #d10a0f);
 	margin-top: 20px;
 	border-radius: 15px;
-	border-collapse: collapse;
 }
 
 .study-major th {
@@ -327,7 +263,8 @@ aside {
 	border-bottom: transparent;
 }
 
-.study-major td, .study-major th {
+.study-major td,
+.study-major th {
 	padding: 0.5rem;
 }
 
@@ -344,55 +281,32 @@ aside {
 	content: "\f004";
 	font-weight: 900;
 	font-size: inherit;
-	-ms-flex-item-align: center;
-	-ms-grid-row-align: center;
-	align-self: center;
 	color: rgb(233, 41, 73);
-}
-
-#qualification-section ul>li>div {
-	-ms-flex-item-align: center;
-	-ms-grid-row-align: center;
-	align-self: center;
 }
 
 #qualification-section ul>li>span {
 	padding: 5px;
-	-ms-flex-item-align: center;
-	-ms-grid-row-align: center;
-	align-self: center;
 	border-radius: 15px;
 	margin: 10px;
 }
 
-#Q1 {
-	background-color: rgb(0, 11, 165);
+#qualification-section ul>li>div,
+#qualification-section ul>li::before,
+#qualification-section ul>li>span {
+  -ms-flex-item-align: center;
+	-ms-grid-row-align: center;
+	align-self: center;
 }
 
-#Q2 {
-	background-color: rgb(4, 119, 0);
-}
-
-#Q3 {
-	background-color: rgb(177, 150, 0);
-}
-
-#Q4 {
-	background-color: rgb(158, 0, 158);
-}
-
-#Q5 {
-	background-color: rgb(168, 0, 0);
-}
+#Q1 {background-color: rgb(0, 11, 165);}
+#Q2 {background-color: rgb(4, 119, 0);}
+#Q3 {background-color: rgb(177, 150, 0);}
+#Q4 {background-color: rgb(158, 0, 158);}
+#Q5 {background-color: rgb(168, 0, 0);}
 
 /* certification */
 
 /* right of resume !!!!!!!!!!!!!! */
-
-.right-of-resume {
-	width: 40%;
-	height: 100%;
-}
 
 /* skill */
 
@@ -402,8 +316,8 @@ aside {
 }
 
 #skill-section .progress-bar {
-	background: -webkit-gradient(linear, left top, right top, from(rgba(70, 181, 255, 1)), color-stop(50%, rgba(123, 38, 233, 1)), color-stop(100%, rgba(255, 0, 0, 1)), to(rgba(0, 212, 255, 1)));
 	background: -o-linear-gradient(left, rgba(70, 181, 255, 1) 0%, rgba(123, 38, 233, 1) 50%, rgba(255, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
+	background: -webkit-gradient(linear, left top, right top, from(rgba(70, 181, 255, 1)), color-stop(50%, rgba(123, 38, 233, 1)), color-stop(100%, rgba(255, 0, 0, 1)), to(rgba(0, 212, 255, 1)));
 	background: linear-gradient(90deg, rgba(70, 181, 255, 1) 0%, rgba(123, 38, 233, 1) 50%, rgba(255, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
 	-webkit-animation: fill-progress-bar 0.8s ease-in-out;
 	animation: fill-progress-bar 0.8s ease-in-out;
@@ -419,33 +333,29 @@ aside {
 	color: #d6ba33;
 }
 
-/* activity */
-
 /* =================FOOTER===================== */
 
-#footer {
-	background-color: #252525;
-	color: white;
-	font-family: Dejavu;
-	bottom: 0;
-	width: 100%;
-}
-
-#footer a {
-	position: relative;
-	color: inherit;
-	margin: 0 -80px;
+#footer,
+#footer>.contact,
+.copyright {
+  background-color: #252525;
 }
 
 #footer>.contact {
-	padding: 10px 0;
+  padding-left: 100px;
+}
+
+#footer a {
+  color: inherit;
+  display: block;
+  padding-top: 10px;
 }
 
 #footer a:hover {
-	color: rgb(70, 181, 255);
+	color: var(--base-color);
 	text-decoration: none;
 }
 
 .copyright {
-	text-align: center;
+  text-align: center;
 }
