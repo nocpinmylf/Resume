@@ -1,29 +1,10 @@
 :root {
-	--base-color: rgb(70, 181, 255);
+  --base-color:#46b5ff;
 }
 
 @font-face {
 	font-family: Dejavu;
-	src: url(../Resources/Fonts/DejaVuSansMono.woff);
-}
-
-@font-face {
-	font-family: Dejavu;
-	src: url(../Resources/Fonts/DejaVuSansMono-Bold.woff);
-	font-weight: bold;
-}
-
-@font-face {
-	font-family: Dejavu;
-	src: url(../Resources/Fonts/DejaVuSansMono-Oblique.woff);
-	font-style: oblique;
-}
-
-@font-face {
-	font-family: Dejavu;
-	src: url(../Resources/Fonts/DejaVuSansMono-BoldOblique.woff);
-	font-style: oblique;
-	font-weight: bold;
+	src: url(../Resources/Fonts/DejaVuSansMono.woff) format('woff');
 }
 
 @keyframes fill-progress-bar {
@@ -41,24 +22,15 @@
 }
 
 #header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: head;
 }
 #sidebar {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
   grid-area: side;
 }
 #main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: main;
 }
 #footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
   grid-area: foot;
 }
 
@@ -68,7 +40,7 @@ html {
 }
 
 body.row {
-  color: white;
+  color: #fff;
   font-family: Dejavu;
   background: url(../Resources/Images/background.png);
   background-repeat: repeat;
@@ -95,20 +67,10 @@ header {
 	z-index: 1;
 }
 
-/* #header>.custom-switch {
-	padding: 7px 20px 10px 0px;
-	text-align: end;
-} */
-
 /* =================SIDEBAR==================== */
-#sidebar {
-	position: fixed;
-	font-family: Dejavu;
-	top: 0;
-	z-index: 1;
-}
-
 aside {
+  position: fixed;
+	z-index: 1;
 	width: 16vw;
 	height: 100%;
 	overflow-x: hidden;
@@ -176,8 +138,8 @@ aside {
 	padding-top: 50px;
 	text-align: center;
 	font-size: 55px;
-	font-weight: bold;
-	text-shadow: -3px 3px 0 rgb(58, 57, 57);
+	font-weight: 900;
+	text-shadow: -3px 3px 0 #3a3939;
 }
 
 .resume-body {
@@ -199,7 +161,7 @@ aside {
 	height: 0.1vh;
 	width: 250px;
 	margin-top: 5px;
-	background-color: rgb(134, 124, 105);
+	background-color: #867c69;
 }
 
 .content-header {
@@ -220,14 +182,14 @@ aside {
 	font-style: italic;
 	font-size: 13px;
 	border-radius: 15px;
-	background-color: rgb(98, 96, 94);
+	background-color: #62605e;
 	padding: 10px;
 }
 
 /* education */
 
 .school {
-	font-weight: bold;
+	font-weight: 900;
 	font-size: 15px;
 }
 
@@ -251,12 +213,12 @@ aside {
 }
 
 .study-major th {
-	border-bottom: 2px double rgb(134, 124, 105);
-	font-weight: bold;
+	border-bottom: 2px double #867c69;
+	font-weight: 900;
 }
 
 .study-major tr {
-	border-bottom: 1px solid rgb(134, 124, 105);
+	border-bottom: 1px solid #867c69;
 }
 
 .study-major tfoot>tr {
@@ -265,7 +227,7 @@ aside {
 
 .study-major td,
 .study-major th {
-	padding: 0.5rem;
+	padding: .5rem;
 }
 
 /* qualification */
@@ -281,7 +243,7 @@ aside {
 	content: "\f004";
 	font-weight: 900;
 	font-size: inherit;
-	color: rgb(233, 41, 73);
+	color: #e92949;
 }
 
 #qualification-section ul>li>span {
@@ -294,15 +256,15 @@ aside {
 #qualification-section ul>li::before,
 #qualification-section ul>li>span {
   -ms-flex-item-align: center;
-	-ms-grid-row-align: center;
+  -ms-grid-row-align: center;
 	align-self: center;
 }
 
-#Q1 {background-color: rgb(0, 11, 165);}
-#Q2 {background-color: rgb(4, 119, 0);}
-#Q3 {background-color: rgb(177, 150, 0);}
-#Q4 {background-color: rgb(158, 0, 158);}
-#Q5 {background-color: rgb(168, 0, 0);}
+#Q1 {background-color: #000ba5;}
+#Q2 {background-color: #047700;}
+#Q3 {background-color: #b19600;}
+#Q4 {background-color: #9e009e;}
+#Q5 {background-color: #a80000;}
 
 /* certification */
 
@@ -319,8 +281,8 @@ aside {
 	background: -o-linear-gradient(left, rgba(70, 181, 255, 1) 0%, rgba(123, 38, 233, 1) 50%, rgba(255, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
 	background: -webkit-gradient(linear, left top, right top, from(rgba(70, 181, 255, 1)), color-stop(50%, rgba(123, 38, 233, 1)), color-stop(100%, rgba(255, 0, 0, 1)), to(rgba(0, 212, 255, 1)));
 	background: linear-gradient(90deg, rgba(70, 181, 255, 1) 0%, rgba(123, 38, 233, 1) 50%, rgba(255, 0, 0, 1) 100%, rgba(0, 212, 255, 1) 100%);
-	-webkit-animation: fill-progress-bar 0.8s ease-in-out;
-	animation: fill-progress-bar 0.8s ease-in-out;
+	-webkit-animation: fill-progress-bar .8s ease-in-out;
+	animation: fill-progress-bar .8s ease-in-out;
 }
 
 /* language */
@@ -358,4 +320,31 @@ aside {
 
 .copyright {
   text-align: center;
+}
+
+
+/* ====================== */
+
+@media (max-width: 768px) {
+  body.row {
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:"side" 
+						            "main" 
+                        "foot";
+  }
+
+  #sidebar {
+    position: relative;
+    z-index: 1;
+  }
+
+  aside {
+    width: 100%;
+    height: 30vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: #252525;
+  }
 }
