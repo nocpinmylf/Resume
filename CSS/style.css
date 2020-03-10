@@ -94,7 +94,7 @@ aside {
 #sidebar li {
   text-align: center;
   position: relative;
-  line-height: 30px;
+  line-height: 30px; /* 3 vw*/
 }
 
 .list-sidebar .header {
@@ -135,9 +135,9 @@ aside {
 /* =================RIGHT SIDE================= */
 
 #my-name {
-	padding-top: 50px;
+	padding-top: 1em;
 	text-align: center;
-	font-size: 55px;
+	font-size: 5em;
 	font-weight: 900;
 	text-shadow: -3px 3px 0 #3a3939;
 }
@@ -158,8 +158,8 @@ aside {
 	display: block;
 	border-radius: 5px;
 	content: "";
-	height: 0.1vh;
-	width: 250px;
+	height: .05em;
+	width: 25vw;
 	margin-top: 5px;
 	background-color: #867c69;
 }
@@ -171,11 +171,6 @@ aside {
 }
 
 /* left of resume !!!!!!!!!!!!!! */
-
-.left-of-resume {
-	width: 60%;
-}
-
 /* profile */
 
 .blockquote {
@@ -322,29 +317,90 @@ aside {
   text-align: center;
 }
 
-
 /* ====================== */
 
 @media (max-width: 768px) {
   body.row {
-
+    font-size: 10px;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 18% 1fr 9%;
     grid-template-areas:"side" 
 						            "main" 
                         "foot";
   }
-
+    /* sidebar */
   #sidebar {
     position: relative;
-    z-index: 1;
   }
 
   aside {
     width: 100%;
-    height: 30vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    background: #252525;
+    background: transparent;
+  }
+
+  .banner img {
+    width: 45vw;
+    height: auto;
+    margin: 2vh auto;
+    display: block;
+  }
+
+  .hide {
+    visibility: hidden;
+    display: none;
+  }
+
+  #sidebar li {
+    border-bottom: 1px solid #424242;
+    background-color: #252525;
+  }
+
+  /* right-side */
+
+  .resume-body {
+    display: grid;
+  }
+
+  main.container-fluid {
+    padding: 0px;
+  }
+
+  #my-name {
+    padding-top: 0;
+    font-size: 4em;
+    margin: 2vw;
+  }
+
+  .content-header {
+    color: #368a2b;
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .content-header::after {
+    display: block;
+    border-radius: 5px;
+    content: "";
+    height: .05em;
+    width: 25vh;
+    margin: 5px auto;
+    background-color: #867c69;
+  }
+
+  #language-section,
+  #certification-section,
+  #interest-section,
+  #activity-section {
+    text-align: center;
+  }
+
+  /* footer */
+  #footer>.contact {
+    padding-left: 0px;
+  }
+
+  #footer .col {
+    padding: 5px;
   }
 }
