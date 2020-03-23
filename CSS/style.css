@@ -149,8 +149,8 @@ aside {
 }
 
 .content {
-	margin: 30px 10px;
-	padding: 0 20px;
+	margin: 30px 15px;
+	padding: 0 0px;
 	text-align: justify;
 }
 
@@ -261,6 +261,11 @@ aside {
 #Q4 {background-color: #9e009e;}
 #Q5 {background-color: #a80000;}
 
+/* interest */
+.col {
+	padding-left: 0;
+	padding-right: 0;
+}
 /* certification */
 
 /* right of resume !!!!!!!!!!!!!! */
@@ -396,6 +401,10 @@ aside {
   }
 
   /* footer */
+  footer {
+	font-size: 8px;
+  }
+
   #footer>.contact {
     padding-left: 0px;
   }
