@@ -20,8 +20,10 @@
   <link rel="icon" type=“image/x-icon” href="/Resources/Images/favicon.ico">
 </head>
 
-<body class=row>
-  <header id="header"></header>
+<body class="row" id="body">
+  <header id="header">
+    <button type="button" id="collaspe-side">☰</button>
+  </header>
 
   <aside id="sidebar">
     <div class="sidebar left">
@@ -59,7 +61,7 @@
     <div class="resume-body">
 
       <!-- left of resume -->
-      <div class="left-of-resume">
+      <div id="left-of-resume">
         <div class="content" id="profile-section">
           <h1 class="content-header">&#60;About Me&#62;</h1>
           <blockquote class="blockquote">
@@ -138,7 +140,7 @@
       </div>
 
       <!-- right of resume -->
-      <div class="right-of-resume">
+      <div id="right-of-resume">
         <div class="content" id="skill-section">
           <h1 class="content-header">&#60;Skills&#62;</h1>
           <ul>
@@ -265,12 +267,11 @@
     <div class="copyright">Le M. Duc &copy; 2020.</div>
   </footer>
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  <script async src="Javascript/javascript.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 </body>

@@ -39,50 +39,71 @@ html {
   font-size: 13px;
 }
 
-body.row {
+#body {
   color: #fff;
   font-family: Dejavu;
   background: url(../Resources/Images/background.png);
   background-repeat: repeat;
-	display: -ms-grid;
-	display: grid;
-	margin: 0;
-	-ms-grid-rows: 8vh 1fr 8.5vw;
-  -ms-grid-columns: 15.5vw 83.5vw;
+  display: -ms-grid;
+  display: grid;
+  margin: 0;
+  -ms-grid-rows: 8vh 1fr 8.5vw;
+  -ms-grid-columns: 15.9% 84.1%;
   grid-template-rows: 8vh 1fr 8.5vw;
-	grid-template-columns: 15.5vw 83.5vw;
-	grid-template-areas:  "side head" 
-						            "side main" 
-                        "side foot";        
+  grid-template-columns: 15.9% 84.1%;
+  grid-template-areas:  'side head' 
+                        'side main' 
+                        'side foot';        
 }
 
 /* MAIN ============================================ */
 /* =================HEADER===================== */
 
-header {
+#header {
 	background-color: #252525;
-	height: 8vh;
+	height: 40px;
 	width: 100%;
 	font-family: Dejavu;
-	z-index: 1;
+  z-index: 1;
+  
+}
+
+#collaspe-side {
+	color: white;
+	background: transparent;
+	border: 0;
+	height: 100%;
+	margin-left: 15px;
+	padding: 0 10px;
+	font-weight: 900;
+  font-size: 20px;
+  transition: 0.1s;
+}
+
+#collaspe-side:focus {
+	outline: 0;
+}
+
+#collaspe-side:hover {
+	color: var(--base-color);
 }
 
 /* =================SIDEBAR==================== */
-aside {
+#sidebar {
   position: fixed;
 	z-index: 1;
 	width: 16vw;
 	height: 100%;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	background: #252525;
+  background: #252525;
 }
 
 .banner img {
 	max-width: 95%;
 	width: 100%;
 	height: auto;
-	margin: 8px 5px;
+  margin: 8px 5px;
 }
 
 #sidebar span {
@@ -133,6 +154,13 @@ aside {
 }
 
 /* =================RIGHT SIDE================= */
+#left-of-resume {
+	width: 60%;
+}
+
+#right-of-resume {
+	width: 40%;
+}
 
 #my-name {
 	padding-top: 1em;
@@ -234,8 +262,8 @@ aside {
 }
 
 #qualification-section ul>li::before {
-	font-family: "Font Awesome 5 Free";
-	content: "\f004";
+	font-family: 'Font Awesome 5 Free';
+	content: '\f004';
 	font-weight: 900;
 	font-size: inherit;
 	color: #e92949;
@@ -325,20 +353,25 @@ aside {
 /* ====================== */
 
 @media (max-width: 768px) {
-  body.row {
+  #body {
     font-size: 10px;
     grid-template-columns: 1fr;
     grid-template-rows: 18% 1fr 9%;
-    grid-template-areas:"side" 
-						            "main" 
-                        "foot";
+    grid-template-areas:'side' 
+                        'main'
+                        'foot';
   }
+
+  #header {
+    display: none;
+  }
+
     /* sidebar */
   #sidebar {
     position: relative;
   }
 
-  aside {
+  #sidebar {
     width: 100%;
     background: transparent;
   }
@@ -366,9 +399,10 @@ aside {
     display: grid;
   }
 
-  main.container-fluid {
-    padding: 0px;
-  }
+	#left-of-resume,
+	#right-of-resume {
+		width: inherit;
+	}
 
   #my-name {
     padding-top: 0;
@@ -401,7 +435,7 @@ aside {
   }
 
   /* footer */
-  footer {
+  #footer {
 	font-size: 8px;
   }
 
